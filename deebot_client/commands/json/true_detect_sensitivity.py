@@ -38,9 +38,9 @@ class SetTrueDetectSensitivity(JsonSetCommand):
 
     name = "setTrueDetect"
     get_command = GetTrueDetectSensitivity
-    _mqtt_params = MappingProxyType({"level": InitParam(TrueDetect)})
+    _mqtt_params = MappingProxyType({"level": InitParam(TrueDetectSensitivity)})
 
-    def __init__(self, level: TrueDetect | str) -> None:
+    def __init__(self, level: TrueDetectSensitivity | str) -> None:
         if isinstance(level, str):
-            level = get_enum(TrueDetect, level)
+            level = get_enum(TrueDetectSensitivity, level)
         super().__init__({"level": level.value})
