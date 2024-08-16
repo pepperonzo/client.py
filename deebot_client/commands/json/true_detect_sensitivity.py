@@ -6,7 +6,7 @@ from types import MappingProxyType
 from typing import TYPE_CHECKING, Any
 
 from deebot_client.command import InitParam
-from deebot_client.events import TrueDetectSensitivityEvent
+from deebot_client.events import TrueDetectSensitivity, TrueDetectSensitivityEvent
 from deebot_client.message import HandlingResult
 from deebot_client.util import get_enum
 
@@ -29,7 +29,7 @@ class GetTrueDetectSensitivity(JsonGetCommand):
 
         :return: A message response
         """
-        event_bus.notify(TrueDetectSensitivityEvent(TrueDetect(int(data["level"]))))
+        event_bus.notify(TrueDetectSensitivityEvent(TrueDetectSensitivity(int(data["level"]))))
         return HandlingResult.success()
 
 
