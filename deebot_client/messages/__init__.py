@@ -22,6 +22,7 @@ _LEGACY_USE_GET_COMMAND = [
     "getCachedMapInfo",
     "getCarpertPressure",
     "getChargeState",
+    "getChildLock",
     "getCleanCount",
     "getCleanInfo",
     "getCleanPreference",
