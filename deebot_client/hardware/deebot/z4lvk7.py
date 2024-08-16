@@ -173,6 +173,9 @@ DEVICES[short_name(__name__)] = StaticDeviceInfo(
                 [GetCarpetAutoFanBoost()],
                 SetCarpetAutoFanBoost,
             ),
+            child_lock=CapabilitySetEnable(
+                ChildLockEvent, [GetChildLock()], SetChildLock
+            ),
             true_detect=CapabilitySetEnable(
                 TrueDetectEvent, [GetTrueDetect()], SetTrueDetect
             ),
