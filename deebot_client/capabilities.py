@@ -45,8 +45,6 @@ from deebot_client.events import (
     SweepModeEvent,
     TotalStatsEvent,
     TrueDetectEvent,
-    TrueDetectSensitivity,
-    TrueDetectSensitivityEvent,
     VoiceAssistantStateEvent,
     VolumeEvent,
     WaterAmount,
@@ -202,7 +200,6 @@ class CapabilitySettings:
     ota: CapabilitySetEnable[OtaEvent] | CapabilityEvent[OtaEvent] | None = None
     sweep_mode: CapabilitySetEnable[SweepModeEvent] | None = None
     true_detect: CapabilitySetEnable[TrueDetectEvent] | None = None
-    true_detect_sensitivity: CapabilitySetEnable[TrueDetectSensitivityEvent] | None = None
     voice_assistant: CapabilitySetEnable[VoiceAssistantStateEvent] | None = None
     volume: CapabilitySet[VolumeEvent, int]
 

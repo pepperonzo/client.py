@@ -53,7 +53,6 @@ from deebot_client.commands.json.pos import GetPos
 from deebot_client.commands.json.relocation import SetRelocationState
 from deebot_client.commands.json.stats import GetStats, GetTotalStats
 from deebot_client.commands.json.true_detect import GetTrueDetect, SetTrueDetect
-from deebot_client.commands.json.true_detect_sensitivity import GetTrueDetectSensitivity, SetTrueDetectSensitivity
 from deebot_client.commands.json.volume import GetVolume, SetVolume
 from deebot_client.commands.json.water_info import GetWaterInfo, SetWaterInfo
 from deebot_client.commands.json.work_mode import GetWorkMode, SetWorkMode
@@ -87,8 +86,6 @@ from deebot_client.events import (
     StatsEvent,
     TotalStatsEvent,
     TrueDetectEvent,
-    TrueDetectSensitivity,
-    TrueDetectSensitivityEvent,
     VolumeEvent,
     WaterAmount,
     WaterInfoEvent,
@@ -182,15 +179,6 @@ DEVICES[short_name(__name__)] = StaticDeviceInfo(
             ),
             true_detect=CapabilitySetEnable(
                 TrueDetectEvent, [GetTrueDetect()], SetTrueDetect
-            ),
-            true_detect_sensitivity=CapabilitySetTypes(
-                event=TrueDetectSensitivityEvent,
-                get=[GetTrueDetectSensitivity()],
-                set=SetTrueDetectSensitivity,
-                types=(
-                    TrueDetectSensitivity.HIGH,
-                    TrueDetectSensitivity.STANDARD,
-                ),
             ),
             volume=CapabilitySet(VolumeEvent, [GetVolume()], SetVolume),
         ),
