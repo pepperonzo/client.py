@@ -41,6 +41,7 @@ _LEGACY_USE_GET_COMMAND = [
     "getSweepMode",
     "getTotalStats",
     "getTrueDetect",
+    "getTrueDetectSensitivity",
     "getVoiceAssistantState",
     "getVolume",
     "getWaterInfo",

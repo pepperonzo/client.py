@@ -34,6 +34,7 @@ from deebot_client.commands.json.pos import GetPos
 from deebot_client.commands.json.safe_protect import GetSafeProtect
 from deebot_client.commands.json.stats import GetStats, GetTotalStats
 from deebot_client.commands.json.true_detect import GetTrueDetect
+from deebot_client.commands.json.true_detect_sensitivity import GetTrueDetectSensitivity
 from deebot_client.commands.json.voice_assistant_state import GetVoiceAssistantState
 from deebot_client.commands.json.volume import GetVolume
 from deebot_client.commands.json.water_info import GetWaterInfo
@@ -64,6 +65,7 @@ from deebot_client.events import (
     StatsEvent,
     TotalStatsEvent,
     TrueDetectEvent,
+    TrueDetectSensitivityEvent,
     VoiceAssistantStateEvent,
     VolumeEvent,
 )
