@@ -45,6 +45,7 @@ from deebot_client.events import (
     SweepModeEvent,
     TotalStatsEvent,
     TrueDetectEvent,
+    TrueDetectSensitivity,
     TrueDetectSensitivityEvent,
     VoiceAssistantStateEvent,
     VolumeEvent,

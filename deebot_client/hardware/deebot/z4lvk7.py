@@ -87,6 +87,7 @@ from deebot_client.events import (
     StatsEvent,
     TotalStatsEvent,
     TrueDetectEvent,
+    TrueDetectSensitivity,
     TrueDetectSensitivityEvent,
     VolumeEvent,
     WaterAmount,
