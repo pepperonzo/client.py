@@ -63,6 +63,7 @@ from deebot_client.events import (
     BatteryEvent,
     CachedMapInfoEvent,
     CarpetAutoFanBoostEvent,
+    ChildLockEvent,
     CleanCountEvent,
     CleanLogEvent,
     CleanPreferenceEvent,
