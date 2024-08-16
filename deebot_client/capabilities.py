@@ -43,6 +43,7 @@ from deebot_client.events import (
     StateEvent,
     StatsEvent,
     SweepModeEvent,
+    SwitchStateEvent,
     TotalStatsEvent,
     TrueDetectEvent,
     VoiceAssistantStateEvent,
@@ -199,6 +200,7 @@ class CapabilitySettings:
     safe_protect: CapabilitySetEnable[SafeProtectEvent] | None = None
     ota: CapabilitySetEnable[OtaEvent] | CapabilityEvent[OtaEvent] | None = None
     sweep_mode: CapabilitySetEnable[SweepModeEvent] | None = None
+    switch_state: CapabilitySetEnable[SwitchStateEvent] | None = None
     true_detect: CapabilitySetEnable[TrueDetectEvent] | None = None
     voice_assistant: CapabilitySetEnable[VoiceAssistantStateEvent] | None = None
     volume: CapabilitySet[VolumeEvent, int]

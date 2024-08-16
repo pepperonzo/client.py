@@ -268,6 +268,10 @@ class SweepModeEvent(EnableEvent):
 @dataclass(frozen=True)
 class ChildLockEvent(EnableEvent):
     """Child lock event."""
+    
+@dataclass(frozen=True)
+class SwitchStateEvent(EnableEvent):
+    """Switch state event."""
 
 
 @dataclass(frozen=True)

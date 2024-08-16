@@ -52,6 +52,7 @@ from deebot_client.commands.json.play_sound import PlaySound
 from deebot_client.commands.json.pos import GetPos
 from deebot_client.commands.json.relocation import SetRelocationState
 from deebot_client.commands.json.stats import GetStats, GetTotalStats
+from deebot_client.commands.json.switch_state import GetSwitchState, SetSwitchState
 from deebot_client.commands.json.true_detect import GetTrueDetect, SetTrueDetect
 from deebot_client.commands.json.volume import GetVolume, SetVolume
 from deebot_client.commands.json.water_info import GetWaterInfo, SetWaterInfo
@@ -84,6 +85,7 @@ from deebot_client.events import (
     RoomsEvent,
     StateEvent,
     StatsEvent,
+    SwitchStateEvent,
     TotalStatsEvent,
     TrueDetectEvent,
     VolumeEvent,
@@ -176,6 +178,9 @@ DEVICES[short_name(__name__)] = StaticDeviceInfo(
             ),
             child_lock=CapabilitySetEnable(
                 ChildLockEvent, [GetChildLock()], SetChildLock
+            ),
+            switch_state=CapabilitySetEnable(
+                SwitchStateEvent, [GetSwitchState()], SetSwitchState
             ),
             true_detect=CapabilitySetEnable(
                 TrueDetectEvent, [GetTrueDetect()], SetTrueDetect

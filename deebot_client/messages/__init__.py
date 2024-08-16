@@ -39,6 +39,7 @@ _LEGACY_USE_GET_COMMAND = [
     "getPos",
     "getSpeed",
     "getSweepMode",
+    "getSwitchState",
     "getTotalStats",
     "getTrueDetect",
     "getVoiceAssistantState",
