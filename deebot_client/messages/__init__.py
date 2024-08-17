@@ -26,6 +26,7 @@ _LEGACY_USE_GET_COMMAND = [
     "getCleanCount",
     "getCleanInfo",
     "getCleanPreference",
+    "getCleaningSpeed",
     "getEfficiency",
     "getError",
     "getLifeSpan",
