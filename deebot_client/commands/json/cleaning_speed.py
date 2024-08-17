@@ -19,7 +19,7 @@ if TYPE_CHECKING:
 class GetCleaningSpeed(JsonGetCommand):
     """Get cleaning speed command."""
 
-    name = "getCustomAreaMode"
+    name = "onCustomAreaMode"
 
     @classmethod
     def _handle_body_data_dict(
