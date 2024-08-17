@@ -34,6 +34,7 @@ from deebot_client.commands.json.clean_preference import (
     GetCleanPreference,
     SetCleanPreference,
 )
+from deebot_client.commands.json.cleaning_speed import GetCleaningSpeed, SetCleaningSpeed
 from deebot_client.commands.json.continuous_cleaning import (
     GetContinuousCleaning,
     SetContinuousCleaning,
@@ -68,6 +69,8 @@ from deebot_client.events import (
     CleanCountEvent,
     CleanLogEvent,
     CleanPreferenceEvent,
+    CleaningSpeed,
+    CleaningSpeedEvent,
     ContinuousCleaningEvent,
     CustomCommandEvent,
     ErrorEvent,
@@ -110,6 +113,16 @@ DEVICES[short_name(__name__)] = StaticDeviceInfo(
         charge=CapabilityExecute(Charge),
         clean=CapabilityClean(
             action=CapabilityCleanAction(command=Clean, area=CleanArea),
+            cleaning_speed=CapabilitySetTypes(
+                event=CleaningSpeedEvent,
+                get=[GetCleaningSpeed()],
+                set=SetCleaningSpeed,
+                types=(
+                    CleaningSpeed.QUICK_CLEANING,
+                    CleaningSpeed.STANDARD,
+                    CleaningSpeed.DEEP_CLEANING,
+                ),
+            ),
             continuous=CapabilitySetEnable(
                 ContinuousCleaningEvent,
                 [GetContinuousCleaning()],

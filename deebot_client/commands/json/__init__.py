@@ -17,6 +17,7 @@ from .clean import Clean, CleanArea, CleanV2, GetCleanInfo, GetCleanInfoV2
 from .clean_count import GetCleanCount, SetCleanCount
 from .clean_logs import GetCleanLogs
 from .clean_preference import GetCleanPreference, SetCleanPreference
+from .cleaning_speed import GetCleaningSpeed, SetCleaningSpeed
 from .clear_map import ClearMap
 from .continuous_cleaning import GetContinuousCleaning, SetContinuousCleaning
 from .cross_map_border_warning import GetCrossMapBorderWarning, SetCrossMapBorderWarning
@@ -66,6 +67,8 @@ __all__ = [
     "SetCleanCount",
     "GetCleanPreference",
     "SetCleanPreference",
+    "GetCleaningSpeed",
+    "SetCleaningSpeed",
     "ClearMap",
     "Charge",
     "GetChildLock",
@@ -146,6 +149,9 @@ _COMMANDS: list[type[JsonCommand]] = [
 
     GetCleanPreference,
     SetCleanPreference,
+    
+    GetCleaningSpeed,
+    SetCleaningSpeed,
 
     ClearMap,
 

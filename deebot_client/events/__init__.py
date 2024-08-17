@@ -24,6 +24,7 @@ from .map import (
     PositionType,
 )
 from .network import NetworkInfoEvent
+from .cleaning_speed import CleaningSpeed, CleaningSpeedEvent
 from .water_info import SweepType, WaterAmount, WaterInfoEvent
 from .work_mode import WorkMode, WorkModeEvent
 
@@ -35,6 +36,8 @@ __all__ = [
     "CachedMapInfoEvent",
     "CleanJobStatus",
     "CleanLogEntry",
+    "CleaningSpeed",
+    "CleaningSpeedEvent",
     "EfficiencyMode",
     "EfficiencyModeEvent",
     "Event",

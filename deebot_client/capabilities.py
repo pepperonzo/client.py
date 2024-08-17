@@ -19,6 +19,8 @@ from deebot_client.events import (
     CleanCountEvent,
     CleanLogEvent,
     CleanPreferenceEvent,
+    CleaningSpeed,
+    CleaningSpeedEvent,
     ContinuousCleaningEvent,
     CrossMapBorderWarningEvent,
     CustomCommandEvent,
@@ -136,6 +138,7 @@ class CapabilityClean:
     """Capabilities for clean."""
 
     action: CapabilityCleanAction
+    cleaning_speed: CapabilitySetTypes[CleaningSpeedEvent, CleaningSpeed] | None = None
     continuous: CapabilitySetEnable[ContinuousCleaningEvent] | None = None
     count: CapabilitySet[CleanCountEvent, int] | None = None
     log: CapabilityEvent[CleanLogEvent] | None = None
