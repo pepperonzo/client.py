@@ -35,7 +35,6 @@ from deebot_client.commands.json.safe_protect import GetSafeProtect
 from deebot_client.commands.json.stats import GetStats, GetTotalStats
 from deebot_client.commands.json.switch_state import GetSwitchState
 from deebot_client.commands.json.true_detect import GetTrueDetect
-from deebot_client.commands.json.true_detect_sensitivity import GetTrueDetectSensitivity
 from deebot_client.commands.json.voice_assistant_state import GetVoiceAssistantState
 from deebot_client.commands.json.volume import GetVolume
 from deebot_client.commands.json.water_info import GetWaterInfo
@@ -81,7 +80,6 @@ from deebot_client.events.map import (
 )
 from deebot_client.events.network import NetworkInfoEvent
 from deebot_client.events.water_info import WaterInfoEvent
-from deebot_client.events.true_detect_sensitivity import TrueDetectSensitivityEvent
 from deebot_client.hardware import get_static_device_info
 from deebot_client.hardware.deebot import DEVICES, FALLBACK, _load
 
@@ -141,7 +139,6 @@ async def test_get_static_device_info(
                 StatsEvent: [GetStats()],
                 TotalStatsEvent: [GetTotalStats()],
                 TrueDetectEvent: [GetTrueDetect()],
-                TrueDetectSensitivityEvent: [GetTrueDetectEvent()],
                 VolumeEvent: [GetVolume()],
                 WaterInfoEvent: [GetWaterInfo()],
             },

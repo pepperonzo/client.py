@@ -25,7 +25,6 @@ from .map import (
 )
 from .network import NetworkInfoEvent
 from .cleaning_speed import CleaningSpeed, CleaningSpeedEvent
-from .true_detect_sensitivity import TrueDetectSensitivity, TrueDetectSensitivityEvent
 from .water_info import SweepType, WaterAmount, WaterInfoEvent
 from .work_mode import WorkMode, WorkModeEvent
 
@@ -57,8 +56,6 @@ __all__ = [
     "PositionsEvent",
     "SweepModeEvent",
     "SweepType",
-    "TrueDetectSensitivity",
-    "TrueDetectSensitivityEvent",
     "WaterAmount",
     "WaterInfoEvent",
     "WorkMode",
