@@ -33,7 +33,7 @@ class GetTrueDetectSensitivity(JsonGetCommand):
         event_bus.notify(
             TrueDetectSensitivityEvent(
                 enable=enable,
-                TrueDetectSensitivityEvent(int(data["level"])),
+                TrueDetectSensitivity(int(data["level"])),
             )
         )
         return HandlingResult.success()
