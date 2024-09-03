@@ -46,7 +46,7 @@ class SetTrueDetectSensitivity(JsonSetCommand):
     get_command = GetTrueDetectSensitivity
     _mqtt_params = MappingProxyType(
         {
-            "enable": InitParam(enable),
+            "enable": InitParam("enable"),
             "level": InitParam(TrueDetectSensitivity),
         }
     )
