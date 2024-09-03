@@ -29,13 +29,7 @@ class GetTrueDetectSensitivity(JsonGetCommand):
 
         :return: A message response
         """
-
-        event_bus.notify(
-            TrueDetectSensitivityEvent(
-                enable=bool(data["enable"]),
-                TrueDetectSensitivity(int(data["level"])),
-            )
-        )
+        event_bus.notify(TrueDetectSensitivityEvent(enable=bool(data["enable"]), TrueDetectSensitivity(int(data["level"]))))
         return HandlingResult.success()
 
 
