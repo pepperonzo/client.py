@@ -47,6 +47,7 @@ from .stats import GetStats, GetTotalStats
 from .sweep_mode import GetSweepMode, SetSweepMode
 from .switch_state import GetSwitchState, SetSwitchState
 from .true_detect import GetTrueDetect, SetTrueDetect
+from .true_detect_sensitivity import GetTrueDetectSensitivity, SetTrueDetectSensitivity
 from .voice_assistant_state import GetVoiceAssistantState, SetVoiceAssistantState
 from .volume import GetVolume, SetVolume
 from .water_info import GetWaterInfo, SetWaterInfo
@@ -120,6 +121,8 @@ __all__ = [
     "GetTotalStats",
     "GetTrueDetect",
     "SetTrueDetect",
+    "GetTrueDetectSensitivity",
+    "SetTrueDetectSensitivity",
     "GetVoiceAssistantState",
     "SetVoiceAssistantState",
     "GetVolume",
@@ -227,6 +230,9 @@ _COMMANDS: list[type[JsonCommand]] = [
 
     GetTrueDetect,
     SetTrueDetect,
+    
+    GetTrueDetectSensitivity,
+    SetTrueDetectSensitivity,
 
     GetVoiceAssistantState,
     SetVoiceAssistantState,
